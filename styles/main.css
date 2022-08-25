@@ -35,8 +35,8 @@
   --clr-grey-900: hsl(0, 0%, 10%);
   --clr-grey-1000: hsl(0, 0%, 0%);
 
-  --ff-primary: "Commissioner", Verdana, sans-serif;
-  --ff-secondary: "Commissioner", Arial, sans-serif;
+  --ff-primary: "Alata", Verdana, sans-serif;
+  --ff-secondary: "Josefin Sans", Arial, sans-serif;
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-secondary);
 
@@ -82,7 +82,7 @@ body {
   font-family: var(--ff-body);
   font-weight: var(--fw-regular);
   display: grid;
-  grid-template-rows: auto max-content max-content;
+  grid-template-rows: auto max-content;
 }
 
 /* * {
