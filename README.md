@@ -1,4 +1,4 @@
-# Crowdfunding Product Page
+# Loopstudios Landing Page
 
 Another simple challenge from Frontend Mentor.
 
