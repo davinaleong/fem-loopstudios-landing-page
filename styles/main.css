@@ -490,6 +490,18 @@ a:where(:hover, :focus, :focus-visible) {
   color: var(--clr-neutral-100);
   position: relative;
   isolation: isolate;
+  transition: all 0.3s ease-in-out;
+  padding: var(--size-300);
+}
+
+.creation-cell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: var(--clr-neutral-100);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .creation-cell:where(:hover, :focus, :focus-visible) {
@@ -497,11 +509,6 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .creation-cell:where(:hover, :focus, :focus-visible)::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  display: block;
-  background-color: var(--clr-neutral-100);
   opacity: 0.5;
 }
 
@@ -576,6 +583,11 @@ a:where(:hover, :focus, :focus-visible) {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
     height: 65vw;
+    gap: var(--size-500);
+  }
+
+  .creation-cell {
+    padding: var(--size-600);
   }
 
   .creation-cell[data-cell="Deep Earth"] {
