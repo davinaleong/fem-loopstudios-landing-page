@@ -175,6 +175,11 @@ a:where(:hover, :focus, :focus-visible) {
   position: fixed;
   top: 0;
   left: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.primary-header[data-opaque] {
+  background-color: var(--clr-neutral-900);
 }
 
 .btn-header {
