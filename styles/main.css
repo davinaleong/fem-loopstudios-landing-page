@@ -4,7 +4,9 @@
       - Content - General Styling
       - Content - Primary Header
       - Content - Primary Footer
-      - Content - Main Content
+      - Content - Hero Section
+      - Content - Leader Section
+      - Content - Creations Section
     - Utility
       - Utility - Colours
       - Utility - Background Colours
@@ -73,6 +75,7 @@
 
   --transition: all 0.3s ease-in-out;
 
+  --primary-header-height: 8.5em;
   --max-content-width: 50em;
 }
 /** Root - End **/
@@ -173,7 +176,7 @@ a:where(:hover, :focus, :focus-visible) {
 /** Content - Primary Header **/
 .primary-header {
   width: 100%;
-  background-color: hsla(0, 0%, 0%, 0.2);
+  background-color: transparent;
   padding-top: var(--size-800);
   padding-bottom: var(--size-600);
   position: fixed;
@@ -325,10 +328,32 @@ a:where(:hover, :focus, :focus-visible) {
   display: none;
 }
 
-/** Content - Main Content **/
+/** Content - Hero Section **/
 .hero {
-  padding-top: 8.5em;
+  background-image: url(./../images/mobile/image-hero.jpg);
+  padding-top: var(--primary-header-height);
 }
+
+@media (min-width: 48em) {
+  .hero {
+    background-image: url(./../images/desktop/image-hero.jpg);
+  }
+}
+
+.hero-grid {
+  display: grid;
+  align-items: center;
+  min-height: calc(100vh - var(--primary-header-height));
+}
+
+.hero-heading {
+  border: 2px solid var(--clr-neutral-100);
+  padding: var(--size-400) var(--size-200) var(--size-200) var(--size-200);
+}
+
+/** Content - Leader Section **/
+
+/** Content - Creations Section **/
 
 /** Content - End **/
 
