@@ -181,6 +181,7 @@ a:where(:hover, :focus, :focus-visible) {
   background-color: var(--btn-bg-clr);
   border: thin solid var(--btn-border-clr);
   padding: var(--btn-padding);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:where(:hover, :focus, :focus-visible) {
@@ -485,6 +486,23 @@ a:where(:hover, :focus, :focus-visible) {
   height: 100%;
   align-items: end;
   justify-items: start;
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  position: relative;
+  isolation: isolate;
+}
+
+.creation-cell:where(:hover, :focus, :focus-visible) {
+  color: var(--clr-neutral-900);
+}
+
+.creation-cell:where(:hover, :focus, :focus-visible)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: var(--clr-neutral-100);
+  opacity: 0.5;
 }
 
 .creation-cell[data-cell="Deep Earth"] {
@@ -519,6 +537,11 @@ a:where(:hover, :focus, :focus-visible) {
   background-image: url(./../images/mobile/image-fisheye.jpg);
 }
 
+.creation-text {
+  position: relative;
+  z-index: 2;
+}
+
 .creations-btn-container {
   display: grid;
   justify-items: center;
@@ -533,6 +556,64 @@ a:where(:hover, :focus, :focus-visible) {
 
   text-transform: uppercase;
   letter-spacing: 0.3em;
+}
+
+@media (min-width: 48em) {
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    gap: var(--size-600) 0;
+  }
+
+  .creations-heading {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .creation-grid {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    height: 65vw;
+  }
+
+  .creation-cell[data-cell="Deep Earth"] {
+    background-image: url(./../images/desktop/image-deep-earth.jpg);
+  }
+
+  .creation-cell[data-cell="Night Arcade"] {
+    background-image: url(./../images/desktop/image-night-arcade.jpg);
+  }
+
+  .creation-cell[data-cell="Soccer Team VR"] {
+    background-image: url(./../images/desktop/image-soccer-team.jpg);
+  }
+
+  .creation-cell[data-cell="The Grid"] {
+    background-image: url(./../images/desktop/image-grid.jpg);
+  }
+
+  .creation-cell[data-cell="From Up Above VR"] {
+    background-image: url(./../images/desktop/image-from-above.jpg);
+  }
+
+  .creation-cell[data-cell="Pocket Botralis"] {
+    background-image: url(./../images/desktop/image-pocket-borealis.jpg);
+  }
+
+  .creation-cell[data-cell="The Curiocity"] {
+    background-image: url(./../images/desktop/image-curiosity.jpg);
+  }
+
+  .creation-cell[data-cell="Make It Fisheye"] {
+    background-image: url(./../images/desktop/image-fisheye.jpg);
+  }
+
+  .creations-btn-container {
+    margin-top: 0;
+    justify-items: end;
+  }
 }
 
 /** Content - End **/
