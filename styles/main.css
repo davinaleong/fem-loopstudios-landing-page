@@ -373,6 +373,10 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 /** Content - Leader Section **/
+.leader {
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
 
 /** Content - Creations Section **/
 
