@@ -378,6 +378,34 @@ a:where(:hover, :focus, :focus-visible) {
   padding-bottom: 3em;
 }
 
+.leader-container {
+  position: relative;
+}
+
+.leader-heading {
+  margin-top: var(--size-700);
+  margin-bottom: var(--size-400);
+}
+
+@media (min-width: 48em) {
+  .leader {
+    margin-bottom: 3em;
+  }
+
+  .leader-content {
+    position: absolute;
+    right: 0;
+    bottom: -3em;
+    background-color: var(--clr-neutral-100);
+    padding: var(--size-600);
+    max-width: 30em;
+  }
+
+  .leader-heading {
+    margin-top: var(--size-400);
+  }
+}
+
 /** Content - Creations Section **/
 
 /** Content - End **/
