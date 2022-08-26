@@ -131,6 +131,10 @@ b {
   height: 100%;
 }
 
+.nav-list {
+  display: flex;
+}
+
 .container {
   --container-width: 1110px;
 
@@ -286,6 +290,40 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 /** Content - Primary Footer **/
+.footer-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(5, max-content);
+  gap: var(--size-500);
+  justify-items: center;
+}
+
+.primary-footer-nav .nav-list {
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary-footer-nav .nav-link {
+  --clr-link: var(--clr-neutral-100);
+  --clr-hover-link: var(--clr-neutral-100);
+}
+
+.primary-social-nav .nav-list {
+  display: flex;
+  gap: var(--size-400);
+}
+
+.primary-social-nav .nav-link {
+  padding-inline: 0;
+}
+
+.primary-social-nav .nav-link path {
+  fill: var(--clr-neutral-100);
+}
+
+.primary-social-nav .nav-link::before {
+  display: none;
+}
 
 /** Content - Main Content **/
 .hero {
